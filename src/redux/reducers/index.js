@@ -1,0 +1,1 @@
+export { createPostReducer } from './createPostReducer'

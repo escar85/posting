@@ -1,0 +1,1 @@
+export { postsSelector } from './postsSelector'

@@ -31,7 +31,7 @@ const AddPost = (props) => {
 
   return (
     <section className="add-post">
-      <form className="add-post__form" onSubmit={handleSubmit}>
+      <form className="add-post__form" onSubmit={handleSubmit} noValidate>
         <h3>Введите данные для новой записи</h3>
         <Input
           name="title"
@@ -54,7 +54,7 @@ const AddPost = (props) => {
           isValid={isValid}
         />
 
-        <button type="submit">Создать</button>
+        <button type="submit" disabled={!isValid}>Создать</button>
       </form>
       <Link to="/">Вернуться на главную</Link>
     </section>

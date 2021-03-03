@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import Post from "../post/post";
 import "./main.css";
 
@@ -8,14 +7,15 @@ const Main = (props) => {
   const { posts } = props;
 
   useEffect(() => {
-    document.title = 'Главная';
+    document.title = "Главная";
   }, []);
 
   return (
-    <HelmetProvider>
-      <section className="main">
-        <Helmet title="Главная" />
-        <Link to="/add-post">Добавить запись</Link>
+    <section className="main">
+      <Link to="/add-post" className="main__add-post">
+        Добавить запись
+      </Link>
+      <ul className="main__post-list">
         {posts.length > 0
           ? posts.map(({ title, author, id, dateOfCreate }) => (
               <Post
@@ -27,8 +27,8 @@ const Main = (props) => {
               />
             ))
           : ""}
-      </section>
-    </HelmetProvider>
+      </ul>
+    </section>
   );
 };
 

@@ -1,2 +1,2 @@
 export { onCreatePost } from './createPost'
-export { setCurrentPost } from './setCurrentPost'
+export { setPostsFromLocal} from './setPostsFromLocal'

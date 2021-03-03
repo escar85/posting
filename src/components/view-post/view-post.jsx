@@ -10,10 +10,6 @@ const ViewPost = () => {
     document.title = post.title;
   }, [post]);
 
-  console.log(posts)
-  console.log(id)
-  console.log(post)
-
   return (
     <>
       <h1 className="pots__title">{post.title}</h1>

@@ -1,5 +1,4 @@
 import { createSelector } from 'reselect'
+import { stateSelector } from './stateSelector'
 
-const getState = (state) => state.reducer
-
-export const postsSelector = createSelector(getState, (state) => state)
+export const postsSelector = createSelector(stateSelector, (state) => state.posts)

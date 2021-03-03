@@ -1,5 +1,5 @@
 import React from "react";
-import './input.css'
+import "./input.css";
 
 function Input(props) {
   const {
@@ -12,6 +12,7 @@ function Input(props) {
     defaultValue,
     errorText,
   } = props;
+
   return (
     <>
       <label className="input_label">{label}</label>

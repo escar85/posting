@@ -5,6 +5,7 @@ import Input from "../input/input";
 import { useFormWithValidation } from "../../utils/Validation";
 
 const AddPost = (props) => {
+  const { onCreatePost } = props;
   const {
     values,
     handleChange,
@@ -17,9 +18,12 @@ const AddPost = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.onCreate({
+    const date = new Date().toISOString().substring(0, 10);
+    onCreatePost({
       title: values.title,
       author: values.author,
+      date, 
+      id: new Date().toISOString(),
     });
     resetForm();
     history.push("/");

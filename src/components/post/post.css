@@ -1,0 +1,69 @@
+.post {
+    position: relative;
+    min-width: 224px;
+    border-radius: 16px;
+    background-color: lightslategrey;
+    overflow: hidden;
+  }
+  
+  .post__info {
+    margin: 55px 24px 24px;
+    justify-content: space-between;
+    max-width: 352px;
+    color: #1A1B22;
+  }
+  
+  .post__title {
+    font-family: 'Roboto Slab', sans-serif;
+    line-height: 30px;
+    font-size: 26px;
+    font-weight: normal;
+    color: #1A1B22;
+    margin: 12px auto 16px;
+    max-width: 352px;
+  }
+  
+  .post__text {
+    font-family: 'Roboto', sans-serif;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #1A1B22;
+    max-width: 352px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
+    margin: 0 0 18px;
+  }
+  
+   .post__delete-button {
+    position: absolute;
+    top: 12px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    outline: none;
+  }
+/*   
+  .post__delete-button {
+    background-image: url('../../images/trash.svg');
+    right: 12px;
+  }
+  
+  .post__delete-button:hover {
+    transition: all 0.5s linear;
+    opacity: 0.6;
+    cursor: url('../../images/pointer.svg'), pointer;
+  } */
+  

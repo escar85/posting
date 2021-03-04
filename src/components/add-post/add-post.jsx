@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import "./add-post.css";
 import Input from "../input/input";
 import { useFormWithValidation } from "../../utils/Validation";
+import EditorConvertToJSON from './wysiwyg/wysiwyg'
 
 const AddPost = (props) => {
   const { onCreatePost } = props;
@@ -57,6 +58,8 @@ const AddPost = (props) => {
           errorText={errors.author}
           isValid={isValid}
         />
+
+        <EditorConvertToJSON />
 
         <button type="submit" disabled={!isValid}>Создать</button>
       </form>

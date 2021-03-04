@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import "./add-post.css";
-import Input from "../input/input";
+import Input from "./input/input";
 import { useFormWithValidation } from "../../utils/Validation";
-import EditorConvertToJSON from './wysiwyg/wysiwyg'
+import Wysiwyg from "./wysiwyg/wysiwyg";
 
 const AddPost = (props) => {
+  const [wysiwygValue, setWysiwygValue] = React.useState("");
   const { onCreatePost } = props;
+
   const {
     values,
     handleChange,
@@ -23,7 +24,8 @@ const AddPost = (props) => {
     onCreatePost({
       title: values.title,
       author: values.author,
-      date, 
+      date,
+      wysiwygValue,
       id: new Date().toISOString(),
     });
     resetForm();
@@ -37,7 +39,7 @@ const AddPost = (props) => {
   return (
     <section className="add-post">
       <form className="add-post__form" onSubmit={handleSubmit} noValidate>
-        <h3>Введите данные для новой записи</h3>
+        <h3 className="add-post__title">Введите данные для новой записи</h3>
         <Input
           name="title"
           minLength="6"
@@ -59,11 +61,19 @@ const AddPost = (props) => {
           isValid={isValid}
         />
 
-        <EditorConvertToJSON />
+        <Wysiwyg setWysiwygValue={setWysiwygValue} />
 
-        <button type="submit" disabled={!isValid}>Создать</button>
+        <button
+          className="add-post__submit-button"
+          type="submit"
+          disabled={!isValid}
+        >
+          Создать
+        </button>
       </form>
-      <Link to="/">Вернуться на главную</Link>
+      <Link className="add-post__link" to="/">
+        Вернуться на главную
+      </Link>
     </section>
   );
 };

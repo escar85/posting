@@ -1,0 +1,25 @@
+.main {
+  margin: auto;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+
+  &__add-post {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    color: black;
+    margin: 20px auto 30px;
+    text-decoration: none;
+  }
+
+  &__post-list {
+    margin: auto;
+    padding: 0;
+  }
+
+  &__text {
+    font-size: 18px;
+    text-align: center;
+  }
+}

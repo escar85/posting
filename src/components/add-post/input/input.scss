@@ -1,0 +1,39 @@
+.input {
+  width: 358px;
+  margin: 5px auto 5px;
+  padding: 0 0 11px 0;
+  border: unset;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 17px;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+
+  &_label,
+  &_type_error {
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: calc((100% - 358px) / 2);
+  }
+
+  &_label {
+    color: #2f71e5;
+
+    &:first-of-type {
+      margin-top: 22px;
+    }
+  }
+
+  &_type_error {
+    color: red;
+    display: block;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

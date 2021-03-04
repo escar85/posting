@@ -1,0 +1,33 @@
+.post {
+  position: relative;
+  max-width: 720px;
+  background-color: lightslategrey;
+  overflow: hidden;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__info {
+    margin: 24px auto 24px;
+    justify-content: space-between;
+    width: 620px;
+    color: #1a1b22;
+    border: solid 1px black;
+    border-radius: 16px;
+    padding: 10px;
+    background-color: blanchedalmond;
+  }
+
+  &__text {
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #1a1b22;
+    max-width: 352px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0 0 18px;
+  }
+}

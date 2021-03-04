@@ -4,7 +4,6 @@ import AddPost from "../add-post/add-post";
 import Main from "../main/main";
 import ViewPost from "../view-post/view-post";
 import { connector } from "./container";
-import "./app.css";
 
 const App = (props) => {
   const { posts, setPosts, onCreatePost } = props;
